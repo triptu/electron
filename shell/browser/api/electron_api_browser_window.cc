@@ -192,6 +192,7 @@ void BrowserWindow::OnWindowIsKeyChanged(bool is_key) {
     rwhv->SetActive(is_key);
   window()->SetActive(is_key);
 #endif
+  BaseWindow::OnWindowIsKeyChanged(is_key);
 }
 
 void BrowserWindow::OnWindowLeaveFullScreen() {

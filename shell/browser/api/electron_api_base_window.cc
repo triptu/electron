@@ -233,6 +233,14 @@ void BaseWindow::OnWindowFocus() {
   EmitEventSoon("focus");
 }
 
+void BaseWindow::OnWindowIsKeyChanged(bool is_key) {
+  if (is_key) {
+    Emit("become-key");
+  } else {
+    Emit("resign-key");
+  }
+}
+
 void BaseWindow::OnWindowShow() {
   Emit("show");
 }
